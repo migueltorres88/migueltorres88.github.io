@@ -1,0 +1,168 @@
+:root {
+  --uva: #2A1442;
+  --uva-profunda: #1A0B2E;
+  --ciruela: #3A1E5C;
+  --ciruela-clara: #4B2A73;
+  --tinta: #12061F;
+  --lila: #D9CCF2;
+  --amarillo: #FFC83D;
+  --verde: #1B7A4B;
+  --blanco: #FFFFFF;
+  --radio: 18px;
+  --sombra-dura: 0 5px 0 var(--tinta);
+  --espacio: 16px;
+  --ancho-lectura: 760px;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--uva);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+  color: var(--lila);
+  font-family: "Nunito", system-ui, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--amarillo);
+  text-underline-offset: 3px;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--amarillo);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.salto {
+  position: absolute;
+  left: -9999px;
+}
+
+.salto:focus {
+  left: var(--espacio);
+  top: var(--espacio);
+  background: var(--tinta);
+  padding: 8px 12px;
+  z-index: 10;
+}
+
+.cabecera,
+.contenido,
+.pie {
+  width: 100%;
+  max-width: var(--ancho-lectura);
+  margin: 0 auto;
+  padding: 0 var(--espacio);
+}
+
+.cabecera {
+  padding-top: 32px;
+  text-align: center;
+}
+
+.marca {
+  margin: 0;
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.6rem, 9vw, 4rem);
+  line-height: 1.1;
+  color: var(--blanco);
+  text-shadow: 0 4px 0 var(--tinta);
+}
+
+.marca-enlace {
+  color: inherit;
+  text-decoration: none;
+}
+
+.lema {
+  margin: 8px 0 0;
+  font-size: 1.15rem;
+}
+
+.idiomas {
+  margin: 16px 0 0;
+  font-size: 0.95rem;
+}
+
+.tarjeta {
+  margin: 28px 0;
+  padding: 20px var(--espacio);
+  background: var(--ciruela);
+  border: 3px solid var(--tinta);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra-dura);
+}
+
+h2,
+h3 {
+  font-family: "Fredoka", system-ui, sans-serif;
+  color: var(--blanco);
+  line-height: 1.25;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 1.6rem;
+}
+
+h3 {
+  margin: 24px 0 8px;
+  font-size: 1.2rem;
+}
+
+ul {
+  padding-left: 1.2em;
+}
+
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 10px 18px;
+  background: var(--verde);
+  color: var(--blanco);
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  border: 3px solid var(--tinta);
+  border-radius: 14px;
+  box-shadow: 0 4px 0 var(--tinta);
+}
+
+.boton:hover {
+  filter: brightness(1.1);
+}
+
+.nota {
+  font-size: 0.95rem;
+  color: var(--lila);
+}
+
+.pie {
+  padding-bottom: 32px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .tarjeta {
+    padding: 28px 32px;
+  }
+}
